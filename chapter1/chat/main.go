@@ -1,10 +1,8 @@
 package main
 
 import (
-	"go-blueprints-book/chapter1/trace"
 	"log"
 	"net/http"
-	"os"
 	"path/filepath"
 	"sync"
 	"text/template"
@@ -31,7 +29,7 @@ func main() {
 	// "The addr of the application.")
 	// flag.Parse() // parse the flags
 	r := newRoom()
-	r.tracer = trace.New(os.Stdout)
+	//r.tracer = trace.New(os.Stdout) Disabled the tracing
 
 	http.Handle("/", &templateHandler{filename: "chat.html"})
 	http.Handle("/room", r)
