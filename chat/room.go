@@ -1,7 +1,7 @@
 package main
 
 import (
-	"go-blueprints-book/chapter1/trace"
+	"go-blueprints-book/trace"
 	"log"
 	"net/http"
 
